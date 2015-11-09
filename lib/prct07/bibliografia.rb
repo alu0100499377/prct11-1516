@@ -34,5 +34,19 @@ module Prct07
                 nodo.anterior = nil
             end
         end
+        
+        def pop()
+            if (@cabeza != tail)
+                aux = @cabeza
+                @cabeza = @cabeza.next
+                @cabeza.anterior = nil
+                aux.next = nil
+                aux.value
+            else
+                @cabeza = nil
+                @tail = nil
+            end
+        end
+        
     end #class List
 end #mocule
