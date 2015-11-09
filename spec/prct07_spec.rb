@@ -38,6 +38,11 @@ module Prct07
     @lista.pop
     expect(@lista.cabeza).to eq(@node1)
   end
+  
+  it "Lista con su cabeza" do
+    @lista2 = Prct07::List.new()
+    expect(@lista2.cabeza).to eq(nil)
+  end
     
     
  end# end describe list
