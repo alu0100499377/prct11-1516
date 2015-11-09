@@ -31,6 +31,13 @@ module Prct07
     @lista.push(@node2)
     expect(@lista.cabeza).to eq(@node2)
   end
+  
+  it 'Se extrae el primer elemento de la lista' do
+    @lista.push(@node1)
+    @lista.push(@node2)
+    @lista.pop
+    expect(@lista.cabeza).to eq(@node1)
+  end
     
     
  end# end describe list
