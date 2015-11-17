@@ -49,4 +49,15 @@ module Prct07
         end
         
     end #class List
+    
+    
+    class Periodicas < Bibliografia
+        attr_accessor :tipoPublicacion
+        
+        def initialize(autor, titulo, isbn, fecha, tipoPublicacion)
+            super(autor, titulo, isbn, fecha)
+            @tipoPublicacion = tipoPublicacion
+        end
+        
+    end#fin clase periodica
 end #mocule
