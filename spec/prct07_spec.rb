@@ -47,4 +47,24 @@ module Prct07
     
  end# end describe list
  
+ 
+ describe Prct07::Periodicas do
+   before :each do
+     @p = Prct07::Periodicas.new('Risto', 'Rincon de pensar', '6543', '1-1-2015', 'documento electronico')
+    
+     @node3 = Node.new(@p, nil)
+    end
+    
+    context "Pruebas para la clase Publicaciones Periodicas" do
+      it "Es de la clase Periodicas" do
+        expect(@p.class) == Periodicas
+      end
+    end
+  end #end describe de Periodicas
+    
+     
+     
+ 
+ 
+ 
 end
