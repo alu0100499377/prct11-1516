@@ -49,7 +49,13 @@ module Prct07
     @lista.push_final(@node2)
     expect(@lista.cabeza).to eq(@node1)
   end
-    
+  
+  it "Extraer ultimo elemento de la lista" do
+    @lista.push_final(@node1)
+    @lista.push_final(@node2)
+    @lista.pop_final
+    expect(@lista.cabeza).to eq(@node1)
+  end
     
  end# end describe list
  
