@@ -43,6 +43,12 @@ module Prct07
     @lista2 = Prct07::List.new()
     expect(@lista2.cabeza).to eq(nil)
   end
+  
+  it "Insertar por el final" do
+    @lista.push_final(@node1)
+    @lista.push_final(@node2)
+    expect(@lista.cabeza).to eq(@node1)
+  end
     
     
  end# end describe list

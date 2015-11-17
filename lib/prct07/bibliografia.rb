@@ -48,6 +48,17 @@ module Prct07
             end
         end
         
+        def push_final(nodo)
+            if @tail == nil
+                @tail = nodo
+                @cabeza = nodo
+            else
+                @tail.next = nodo
+                nodo.anterior = @tail
+                @tail = nodo
+            end
+        end
+        
     end #class List
     
     
