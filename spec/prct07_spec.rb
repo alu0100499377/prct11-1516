@@ -9,6 +9,9 @@ module Prct07
     
     @node1 = Node.new(@l, nil)
     @node2 = Node.new(@l2, nil)
+    
+    @node4 = Node.new(@l, nil)
+    @node5 = Node.new(@l2, nil)
   end
   
   it 'Debe existir un autor' do
@@ -50,11 +53,12 @@ module Prct07
     expect(@lista.cabeza).to eq(@node1)
   end
   
-  it "Extraer ultimo elemento de la lista" do
-    @lista.push_final(@node1)
-    @lista.push_final(@node2)
+  it 'Extraer ultimo elemento de la lista' do
+    @lista.push_final(@node4)
+    @lista.push_final(@node5)
     @lista.pop_final
-    expect(@lista.cabeza).to eq(@node1)
+    
+    expect(@lista.cabeza).to eq(@node4)
   end
     
  end# end describe list
@@ -72,6 +76,10 @@ module Prct07
         expect(@p.class) == Periodicas
       end
     end
+    
+      it "Tiene un tipo publicacion" do
+       expect(@p.tipoPublicacion) == 'documento electronico'
+      end
   end #end describe de Periodicas
     
      

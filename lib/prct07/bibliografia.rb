@@ -59,6 +59,19 @@ module Prct07
             end
         end
         
+        def pop_final
+            if (@cabeza != @tail)
+                aux = @tail
+                @tail = @tail.anterior
+                @tail.next = nil
+                aux.anterior = nil
+                aux.value
+            else
+                @cabeza = nil
+                @tail = nil
+            end
+        end
+        
     end #class List
     
     
