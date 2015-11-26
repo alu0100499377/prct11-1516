@@ -67,6 +67,9 @@ module Prct07
     expect(@lista.cabeza).to eq(@node4)
   end
   
+  it "Se puede hacer each" do
+    @lista.each{|i| yield i}
+  end
   
     
  end# end describe list
