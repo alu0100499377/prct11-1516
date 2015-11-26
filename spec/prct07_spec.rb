@@ -6,6 +6,7 @@ module Prct07
   before :each do
     @l = Prct07::Bibliografia.new('Cervantes', 'El Quijorte', '12345', '1605')
     @l2 = Prct07::Bibliografia.new('Tolkien', 'El Hobbit', '5678', '1945')
+    @l3 = Prct07::Bibliografia.new('Tolkien', 'El Hobbit', '5678', '1945')
     
     @node1 = Node.new(@l, nil)
     @node2 = Node.new(@l2, nil)
@@ -17,6 +18,11 @@ module Prct07
   it 'Debe existir un autor' do
     expect(@l.autor) == 'Cervantes'
   end
+  
+  it "Comprobamos que los libros son el mismo" do
+    (@l2 == @l3).should eq(true)
+  end
+  
  end# end describe bibliografia
   
  describe Prct07::List do
@@ -60,6 +66,8 @@ module Prct07
     
     expect(@lista.cabeza).to eq(@node4)
   end
+  
+  
     
  end# end describe list
  
@@ -82,9 +90,6 @@ module Prct07
       end
   end #end describe de Periodicas
     
-     
-     
- 
  
  
 end
