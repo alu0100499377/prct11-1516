@@ -3,6 +3,7 @@ module Prct07
     Node = Struct.new(:value, :next, :anterior)
     
     class Bibliografia
+        include Comparable
         attr_accessor :autor, :titulo, :isbn, :fecha
         
         def initialize(autor, titulo, isbn, fecha)
@@ -15,6 +16,11 @@ module Prct07
         def to_s
             "Autor: #{@autor}\n Titulo: #{@titulo}\n ISBN: #{@isbn}\n Fecha: #{@fecha}\n"
         end
+        
+        def <=>(anOther)
+            titulo.size <=> anOther.titulo.size
+        end
+        
     end #class Bibliografia
     #################################################
     
