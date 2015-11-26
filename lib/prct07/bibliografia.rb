@@ -25,9 +25,19 @@ module Prct07
     #################################################
     
     class List   
+        
+        include Enumerable
         attr_accessor :cabeza, :tail
         @cabeza = nil
         @tail = nil
+        
+        def each
+            temp = @cabeza
+            while (temp != @tail) do
+                yield temp.value
+                temp = temp.next
+            end
+        end
         
         def push(nodo)
             if @cabeza == nil
