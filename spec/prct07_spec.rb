@@ -93,6 +93,26 @@ module Prct07
       end
   end #end describe de Periodicas
     
+    
+  describe Prct07::DSL do
+    before :each do
+      @b = DSL.new("Libros") do
+        libro "El Hobbit",
+          :autor => ["JRR Tolkien"],
+          :fecha => "1945",
+          :isbn => [12345]
+      end    
+    
+    end
+    
+    context "Pruebas para el DSL" do
+      it "se crea" do
+        expect(@b).to_not be nil
+      end
+    end
+  end
+    
+  
  
  
 end

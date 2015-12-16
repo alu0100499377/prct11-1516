@@ -1,3 +1,29 @@
+#=bibliografia.rb
+#Autor: Gabriel Garcia Ventura
+#
+#==Documentacion generada con RDOC
+#
+#===class Bibliografia
+#*metodo initialize
+#*metodo to_s
+#*metodo <=>
+#
+#===class List
+#*metodo each
+#*metodo push
+#*metodo pop
+#*push_final
+#*pop_final
+#
+#===class Periodicas<Bibliografia
+#*metodo initialize
+#
+#===class DSL
+#*metodo initialize
+#*metodo libro
+#*metodo to_s
+#
+
 module Prct07
     
     Node = Struct.new(:value, :next, :anterior)
@@ -100,4 +126,30 @@ module Prct07
         end
         
     end#fin clase periodica
+    
+    class DSL
+        
+        attr_accessor :titulo, :name, :biblio
+        
+        def initialize(name, &block)
+            @name = name
+            @biblio = []
+        end
+        
+        def libro(titulo, info={})
+            a = Prct07::Bibliografia.new(info[:auto],
+                                        titulo,
+                                        info[:isbn],
+                                        info[:fecha])
+                                        
+            biblio << a
+          
+        end
+        
+        def to_s
+            
+        end
+    
+    end #fin de la clase DSL
+            
 end #mocule
