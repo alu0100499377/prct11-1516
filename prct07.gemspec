@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   #end
   
   if spec.respond_to?(:metadata)
-    spec.metadata = { "allowed_push_host" => 'http://mygemserver.com'}
+    #spec.metadata = { "allowed_push_host" => 'http://mygemserver.com'}
   end
 
 
