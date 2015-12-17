@@ -7,7 +7,8 @@ Gem::Specification.new do |spec|
   spec.name          = "prct07"
   spec.version       = Prct07::VERSION
   spec.authors       = ["alu0100499377"]
-  spec.email         = ["alu0100499377@ull.edu.es"]
+  #spec.email         = ["alu0100499377@ull.edu.es"]
+  spec.email         = ["elderegistrar@gmail.com"]
 
   #if spec.respond_to?(:metadata)
     #spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
